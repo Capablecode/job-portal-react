@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fdfdfd; /* fallback background */
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: #fff;
+  max-width: 1024px;
+  margin: 1rem auto;
+}

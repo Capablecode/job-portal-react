@@ -1,0 +1,134 @@
+/* Container for all job cards */
+.job-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Grid for job cards */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+  gap: 20px;
+}
+
+/* Individual job card */
+/* .job-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+} */
+.job-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  position: relative; /* Needed for absolute positioning of .job-type */
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Job type badge */
+/* .job-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+} */
+/* Job type badge */
+.job-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: absolute; /* Make it positionable */
+  top: 10px;
+  right: 10px; /* Align to the right */
+}
+
+/* Logo styling */
+.job-logo img {
+  width: 50px;
+  height: auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Job title */
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Company and location section */
+.job-details {
+  font-size: 14px;
+  color: #777;
+}
+
+.company-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+/* Location and apply section */
+.location-and-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.job-location {
+  color: #777;
+}
+
+.apply-now {
+  color: #00b200;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .job-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .job-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .job-list {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
